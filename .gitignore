@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+#todo experiments
+
+#todo data
+
+#design kad bude lep
+DESIGN.md
+
+#os editor and stuff
+.vscode/

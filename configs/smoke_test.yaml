@@ -1,0 +1,22 @@
+# small config za probu CI
+seed: 42
+instance: data/instances/probni.tsp
+
+aco:
+  n_ants: 5
+  n_iterations: 3
+  alpha_range: [0.5, 5.0]
+  beta_range: [0.5, 5.0]
+  rho_range: [0.01, 0.5]
+  q_range: [1.0, 500.0]
+
+gp:
+  population_size: 4
+  n_generations: 2
+  crossover_rate: 0.8
+  mutation_rate: 0.1
+  tournament_size: 2
+
+logging:
+  backend: csv
+  experiment_name: smoke_test
