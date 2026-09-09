@@ -96,4 +96,8 @@ def test_mutate_invalid_rate_raises():
     with pytest.raises(ValueError):
         mutate(ind, SPECS, mutation_rate=-0.1, rng=rng)
     with pytest.raises(ValueError):
+<<<<<<< HEAD
         mutate(ind, SPECS, mutation_rate=1.1, rng=rng)
+=======
+        mutate(ind, SPECS, mutation_rate=1.1, rng=rng)
+>>>>>>> 7b0927dd1bb1ac6d4c154c8cfe7c14c442f97e44

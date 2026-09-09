@@ -91,4 +91,8 @@ def test_run_gp_invalid_params_raise():
     with pytest.raises(ValueError):
         run_gp(**{**kwargs, "elitism": 10})
     with pytest.raises(ValueError):
+<<<<<<< HEAD
         run_gp(**{**kwargs, "elitism": -1})
+=======
+        run_gp(**{**kwargs, "elitism": -1})
+>>>>>>> 7b0927dd1bb1ac6d4c154c8cfe7c14c442f97e44

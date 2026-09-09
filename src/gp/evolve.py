@@ -101,4 +101,8 @@ def run_gp(
 
         best_fitness_history.append(best_individual.fitness)
 
+<<<<<<< HEAD
     return GPResult(best_individual=best_individual, best_fitness_history=best_fitness_history)
+=======
+    return GPResult(best_individual=best_individual, best_fitness_history=best_fitness_history)
+>>>>>>> 7b0927dd1bb1ac6d4c154c8cfe7c14c442f97e44

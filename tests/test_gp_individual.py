@@ -64,4 +64,8 @@ def test_clip_to_bounds_clamps_out_of_range_genes():
 def test_clip_to_bounds_mismatched_length_raises():
     specs = [ParameterSpec("a", 0.0, 1.0)]
     with pytest.raises(ValueError):
+<<<<<<< HEAD
         clip_to_bounds(np.array([0.5, 0.5]), specs)
+=======
+        clip_to_bounds(np.array([0.5, 0.5]), specs)
+>>>>>>> 7b0927dd1bb1ac6d4c154c8cfe7c14c442f97e44

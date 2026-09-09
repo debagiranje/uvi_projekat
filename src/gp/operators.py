@@ -71,4 +71,8 @@ def mutate(
             genes[i] += rng.normal(0, sigma)
 
     genes = clip_to_bounds(genes, specs)
+<<<<<<< HEAD
     return Individual(genes=genes)
+=======
+    return Individual(genes=genes)
+>>>>>>> 7b0927dd1bb1ac6d4c154c8cfe7c14c442f97e44

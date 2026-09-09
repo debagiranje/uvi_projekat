@@ -64,4 +64,8 @@ def clip_to_bounds(genes: np.ndarray, specs: list[ParameterSpec]) -> np.ndarray:
         raise ValueError("Broj gena ne odgovara broju specifikacija parametara")
     low = np.array([s.low for s in specs])
     high = np.array([s.high for s in specs])
+<<<<<<< HEAD
     return np.clip(genes, low, high)
+=======
+    return np.clip(genes, low, high)
+>>>>>>> 7b0927dd1bb1ac6d4c154c8cfe7c14c442f97e44
