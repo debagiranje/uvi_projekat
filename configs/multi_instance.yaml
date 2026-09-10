@@ -1,0 +1,29 @@
+# multi-instance eksperiment - pokreće pun GP+ACO pipeline preko VIŠE
+# TSPLIB instanci, da bi se provjerilo da li pristup generalizuje
+
+seed: 42
+n_repeats: 3  # broj ponavljanja po instanci (razliciti seedovi) - za mean/std pouzdanost
+
+instances:
+  - data/instances/burma14.tsp
+  - data/instances/gr17.tsp
+  - data/instances/berlin52.tsp
+  # - data/instances/eil51.tsp
+  # - data/instances/eil76.tsp
+  # - data/instances/kroA100.tsp
+  # - data/instances/ch150.tsp
+
+aco:
+  n_ants: 15
+  n_iterations: 50
+  alpha_range: [0.5, 5.0]
+  beta_range: [0.5, 5.0]
+  rho_range: [0.01, 0.5]
+  q_range: [1.0, 500.0]
+
+gp:
+  population_size: 15
+  n_generations: 15
+  crossover_rate: 0.8
+  mutation_rate: 0.1
+  tournament_size: 3
