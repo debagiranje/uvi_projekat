@@ -1,0 +1,28 @@
+# sweep params:
+# za razliku od baseline-a (koji koristi GP da AUTOMATSKI nadje dobre
+# parametre), ovaj sweep direktno testira ACO sa RUCNO zadatim vrijednostima,
+# jedan parametar odjednom (OFAT - one-factor-at-a-time), da bi se vidio
+# NEZAVISAN uticaj svakog parametra na kvalitet rjesenja
+seed: 42
+instance: data/instances/berlin52.tsp
+n_repeats: 3  # broj ponavljanja po vrijednosti (razliciti seed-ovi) - za mean/std
+
+# osnovne (fiksne) vrijednosti - koriste se za sve parametre OSIM onog koji
+# se trenutno sweep-uje u datoj dimenziji
+base_aco:
+  alpha: 1.0
+  beta: 3.0
+  rho: 0.3
+  q: 100.0
+  n_ants: 15
+  n_iterations: 50
+
+sweep:
+  - parameter: rho
+    values: [0.05, 0.1, 0.2, 0.3, 0.5, 0.7]
+  - parameter: n_ants
+    values: [5, 10, 15, 25, 40]
+  - parameter: beta
+    values: [0.5, 1.0, 2.0, 3.0, 5.0]
+  - parameter: alpha
+    values: [0.5, 1.0, 2.0, 3.0, 5.0]

@@ -1,0 +1,22 @@
+# isti OFAT sweep kao configs/sweep.yaml, ali ya vise instanci
+seed: 42
+n_repeats: 3
+
+instances:
+  - data/instances/burma14.tsp
+  - data/instances/gr17.tsp
+  - data/instances/berlin52.tsp
+
+base_aco:
+  alpha: 1.0
+  beta: 3.0
+  rho: 0.3
+  q: 100.0
+  n_ants: 15
+  n_iterations: 50
+
+sweep:
+  - parameter: beta
+    values: [0.5, 1.0, 2.0, 3.0, 5.0]
+  - parameter: rho
+    values: [0.05, 0.1, 0.2, 0.3, 0.5, 0.7]
